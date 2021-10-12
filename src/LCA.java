@@ -72,37 +72,4 @@ public class LCA {
 
         }
     }
-
-    public static void main(String[] args){
-        BinaryTree tree = new BinaryTree();
-        tree.add(40);
-        tree.add(20);
-        tree.add(10);
-        tree.add(30);
-        tree.add(60);
-        tree.add(50);
-        tree.add(70);
-        tree.add(5);
-        tree.add(45);
-        tree.add(55);
-
-        /*
-                    40
-                 /      \
-                20       60
-               /  \     /  \
-              10   30  50   70
-             /          \
-            5            55
-         */
-        int firstNumber = 5;
-        int secondNumber = 30;
-        Node lowestCommonAncestorNode = tree.lowestCommonAncestor(tree.root, tree.containsNode(firstNumber),
-                tree.containsNode(secondNumber));
-        if(lowestCommonAncestorNode == null)
-            System.out.print("The value entered does not exist in the binary tree.\n");
-        else
-            System.out.print("Lowest Common Ancestor of " + firstNumber + " and "+ secondNumber + " is: "
-                    + lowestCommonAncestorNode.data);
-    }
 }
